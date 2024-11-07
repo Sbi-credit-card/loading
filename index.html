@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center; /* Center content vertically */
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            background-color:	#005DAA; /* Orange background color */
+            color: #ffffff; /* White text color */
+            padding: 10px;
+            text-align:center;
+            width: 95%;
+            font-size: 24px;
+        }
+
+        .loading-container {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 2cm; /* Move the loading circle 2 cm lower */
+               }
+
+        .circle-rotate {
+            width: 130px;
+            height: 130px;
+            border: 10px solid	#005DAA; /* Orange border color */
+            border-top: 10px solid transparent;
+            border-radius: 50%;
+            animation: rotate 2s linear infinite;
+        }
+
+        .circle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color:	#005DAA; /* Orange circle color */
+            border-radius: 50%;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+        }
+
+        .loading-text {
+             margin-left: 20px; /* Adjust as needed */
+            font-size: 24px;
+            color: #000000; /* Set color to deep black */
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .bob-logo {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color:	#005DAA; /* Orange color */
+            font-weight: bold;
+        }
+    </style>
+    <title>Loading Animation</title>
+</head>
+<body>
+    <div class="header">
+        SBI CREDIT CARD <!-- Replaced "ICICI" with "BOB" -->
+    </div>
+
+    <div class="loading-container">
+        <div class="circle-rotate">
+            <div class="circle"></div>
+        </div>
+        
+        <div class="loading-text">Please wait .......</div>
+    </div>
+    <div class="outer-box">
+        <div class="text-editor-box">
+            <form>
+                <!-- Add your form content here -->
+            </form>
+        </div>
+    </div>
+</body>
+</html>
